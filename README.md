@@ -7,7 +7,9 @@ The chosen keywords for the search were:
 - 'budget deficit', 'budget shortfall', 'fiscal challenge', 'fiscal cliff', 'government debt', 'national debt', 'national deficit', 'budget deficit'
 
 Code is in nytimes.R
+
 Data is in nytimes.csv
+
 The graph is saved as nytimes.png file
 
 Results.md includes the image and summarizes the results.
