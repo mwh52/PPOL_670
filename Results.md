@@ -1,6 +1,6 @@
 
 ## Count of Budget Deficit articles in NYTimes over time
-![chart-all_time_monthly](https://cloud.githubusercontent.com/assets/8549798/6333082/14972f26-bb58-11e4-8876-4a4793f43f29.png)
+![chart](https://cloud.githubusercontent.com/assets/8549798/6337299/e8650670-bb76-11e4-89be-71ab1c3de61e.png)
 
 
 The image above is only the first 94 years January Counts. My token maxxed out.
