@@ -10,7 +10,7 @@ library(ggplot2)
 
 ### set parameters ###
 #API key
-consumerKey <- "e1a7e4a5bb8f9c1155bf6e5853a8ece7:10:68135779"
+consumerKey <- "##"
 
 # "Determining articles about budget deficits"
 q <- "(\"budget deficit\" \"budget shortfall\" \"fiscal challenge\" \"fiscal cliff\" \"government debt\" \"national debt\" \"national deficit\" \"budget deficit\")" 
