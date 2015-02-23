@@ -10,7 +10,7 @@ Code is in nytimes.R
 
 Data is in nytimes.csv
 
-The graph is saved as nytimes.png file
+The graph is saved in an issue file. The path can be seen in nytimes.png.
 
 Results.md includes the image and summarizes the results.
 
