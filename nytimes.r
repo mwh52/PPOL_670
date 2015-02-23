@@ -34,24 +34,21 @@ edate <- expand.grid(year, emonth)
   }
 yrstring<- paste(edate$Var1)
 edate$leapyear <- is.leapyear(yrstring)
-
-#da <- ifelse(ds, var == var, function1, function2)
-#edate[edate$Var3==TRUE & Var2 == "0228"] <- "0229"
-if(edate$leapyear == TRUE & edate$Var2 == "0228"){edate$Var2 <- "0229"}
-
+edate$Var2 <- ifelse((edate$leapyear == TRUE & edate$Var2 == "0228"),"0229", as.character(edate$Var2))
 # end leap year code
-
+# toss leap year variable
 edate$leapyear <- NULL
 
+#make flat for looping
 eedate <- apply(edate,1,paste,collapse="")
 sample <- eedate[]
 
 counts <- c()
 dates <- c()
 
-## if date invalid, returns all results 
-#(filter-term)&
+## warning: if date invalid, api returns all results 
 for (i in sample) {
+  Sys.sleep(10)
   start <- paste0(substring(i,0,6),"01",sep = "")
   end <- i
   resp <- getURL(paste0("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=",q,"&facet_field=source&fl=pub_date&begin_date=",start,"&end_date=", end,"&facet_filter=true&api-key=",consumerKey))
