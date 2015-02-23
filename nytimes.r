@@ -48,7 +48,7 @@ dates <- c()
 
 ## warning: if date invalid, api returns all results 
 for (i in sample) {
-  Sys.sleep(10)
+  Sys.sleep(.2)
   start <- paste0(substring(i,0,6),"01",sep = "")
   end <- i
   resp <- getURL(paste0("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=",q,"&facet_field=source&fl=pub_date&begin_date=",start,"&end_date=", end,"&facet_filter=true&api-key=",consumerKey))
@@ -69,11 +69,22 @@ information = data.frame(artmonthyear, counts, artmont, artyear, artyearnum, art
 
 #reorder for graphing purposes
 orderedinformation <- information[order(artyearnum,artmontnum),]
+# cut for current date
+orderedinformation2 <- orderedinformation[1:1969,]
+
+
+orderedinformation2$sortnum <- orderedinformation2$artyearnum + (orderedinformation2$artmontnum/100)
+orderedinformation2$yearmonth <- as.character(orderedinformation2$sortnum)
+
+#save file
+write.table(orderedinformation2, file = "data", append = FALSE, quote = TRUE, sep = ",",
+            eol = "\n", na = "NA", dec = ".", row.names = TRUE,
+            col.names = TRUE, qmethod = c("escape", "double"),
+            fileEncoding = "")
 #graphing
-png(file="chart-all_time_monthly.png",
+png(file="chart.png",
     width = 900, height = 300)
-p<- ggplot(orderedinformation, aes(x = artmonthyear, y = counts,group=1))+labs(x="Date")+labs(y="Number of Articles") 
+p<- ggplot(orderedinformation2, aes(x = orderedinformation2$yearmonth, y = orderedinformation2$counts,group=1))+labs(x="Date")+labs(y="Number of Articles")
 d <-p + geom_line()
 d
 dev.off()
-
