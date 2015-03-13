@@ -1,10 +1,14 @@
-1100,'kobe','Guard',78,225,'LALakers'
-1200, 'leMark james', 'Forward',85,300,'ClevelandCavaliers'
-1300,'Jimmy Butler','Guard',900,900,'ChicagoBulls'
-1400,'Captain Kirk', 'Guard',1,1,'ChicagoBulls'
-1500, '?????','Guard',80,210,'Philadelphia76ers'
-1600,'Jamison Harden','Guard',78,180,'HoustonRockets'
-1800,'Marky Mathews','Guard',33,45,'PortlandTrailBlazers'
-1900,'Joakim Noah','Center',84,230,'ChicagoBulls'
-2000,'Mark Bradley','Guard',45,180,'BostonCeltics'
-2200,'Marc Gasol','Center',85,260,'ChicagoBulls'
+1100,kobe,Guard,78,225,LALakers
+1200,leMark james,Forward,85,300,ClevelandCavaliers
+1300,Jimmy Butler,Guard,900,900,ChicagoBulls
+1400,Captain Kirk,Guard,1,1,ChicagoBulls
+1500,?????,Guard,80,210,Philadelphia76ers
+1600,Jamison Harden,Guard,78,180,HoustonRockets
+1800,Marky Mathews,Guard,33,45,PortlandTrailBlazers
+1900,Joakim Noah,Center,84,230,ChicagoBulls
+2000,Mark Bradley,Guard,45,180,BostonCeltics
+2200,Marc Gasol,Center,85,260,ChicagoBulls
+23,D'Mark Jordan,Center,90,230,LAClippers
+43,James Marn,Center,78,220,LALakers
+53,Jwow,Center,54,140,NewYorkKnicks
+63,TheOnion,Center,80,120,NewYorkNets
